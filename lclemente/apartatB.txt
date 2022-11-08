@@ -1,0 +1,38 @@
+24.	Quantes línies contenen la paraula Moby? *
+
+cat mobyDick.txt | grep Moby | wc -l
+
+=============================================
+
+25.	Quantes vegades apareix la paraula Moby? 
+
+cat mobyDick.txt | grep Moby | wc -l
+
+=============================================
+
+26.	En quantes línies apareix la paraula if a l'arxiu? (ULL: vull comptar la paraula if, no la cadena if. 
+Per exemple, Cliff no hauria d'aparèixer). 
+
+cat mobyDick.txt | grep ' if ' | wc -l
+
+=============================================
+
+27.	Crea un arxiu anomenat capitulos.txt que continga el número i nom dels capítols. 
+
+cat -n mobyDick.txt | tail -n+47 | head -n270 > capitulos.txt
+
+=============================================
+
+28.	Quantes línies comencen per Moby? 
+
+cat mobyDick.txt | grep ^Moby | wc -l
+
+=============================================
+
+29.	Quantes acaben per Dick? 
+
+cat mobyDick.txt | grep Dick$ | wc -l
+
+=============================================
+
+
