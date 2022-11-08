@@ -1,0 +1,15 @@
+8.	Crea 3 carpetes (dins de vmonfort) anomenades un, dos i tres amb un sol comandament. 
+mkdir {1,2,3}
+
+==================================================
+
+9.	Continua a la teua carpeta vmonfort (com l'hages anomenat tu). 
+Amb un sol comandament crea un arxiu anomenat un.txt que continga el teu nom i cognoms. 
+
+echo 'Laia Clemente Crespo' > un.txt
+
+==================================================
+
+10.	Continua a la teua carpeta vmonfort. Còpia a un arxiu anomenat processos.txt dins la carpeta dos, la eixida d'executar el comando ps aux. 
+
+ps aux >./2/processos.txt
