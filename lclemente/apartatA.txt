@@ -13,3 +13,32 @@ echo 'Laia Clemente Crespo' > un.txt
 10.	Continua a la teua carpeta vmonfort. Còpia a un arxiu anomenat processos.txt dins la carpeta dos, la eixida d'executar el comando ps aux. 
 
 ps aux >./2/processos.txt
+
+==================================================
+
+16.	Sobre l'arxiu processos.txt mostra els processos que siguen de l'usuari root. 
+
+cat processos.txt | grep ^root
+
+====================================================
+
+17.	Sobre l'arxiu processos.txt mostra els identificadors (PID, columna 2) i l'hora d'execució (START, columna 9). 
+
+cat processos.txt | awk '{print $2, $9}'
+
+====================================================
+
+18.	Sobre l'arxiu processos.txt mostra els processos que són els vostres (del vostre usuari) i que aparega el número de línia al seu costat. 
+
+cat processos.txt | grep -n ^alumno
+
+====================================================
+
+19.	Sobre l' arxiu processos.txt mostra les columnes 1, 2 i 11 dels processos amb un PID major 
+o igual a 100 i menor a 1000, separades per dos punts. 
+
+awk '{
+> if ($2 > 100 && $2 < 1000)
+> { print $1, $2, $11}
+> }' processos.txt | sed 's/ /:/g'
+
