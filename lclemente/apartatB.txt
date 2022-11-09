@@ -35,4 +35,25 @@ cat mobyDick.txt | grep Dick$ | wc -l
 
 =============================================
 
+33.	Fem un arxiu anomenat resum.txt (sobre la carpeta tres) que continga el títol de tots els seus capítols i la seva primera línia. *
+Per exemple, per al primer capítol tindrem: 
+CHAPTER 1. Loomings. 
+
+cat mobyDick.txt | tail -n+849 | head -n20637 | grep -A 2 ^CHAPTER > resum.txt
+
+=============================================
+
+34.	Fes un arxiu nou anomenat cachalote.txt amb el contingut de MobyDick.txt però que substitueix la paraula Whale per CACHALOTE. 
+
+cat mobyDick.txt | sed 's/Whale/CACHALOTE/g'> cachalote.txt
+
+=============================================
+
+35.	Crea un arxiu nou anomenat processos2.txt que llegeix el contingut de processos.txt de  l'apartat anterior, 
+i que mostre tan sols l'usuari i el % de memòria (columnes 1 i 4) separats per dos punts. 
+
+cat processos.txt | awk '{print $1,$4}' | sed 's/ /:/g' > processos2.txt
+
+
+
 
